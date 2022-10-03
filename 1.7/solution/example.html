@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            const name = prompt("name?");
+            const date = new Date().getHours();
+
+            if (date < 5) {
+            alert(`Guten Nacht ${name}`);
+        } else if (date < 12) {
+            alert(`Guten Morgen ${name}`);
+        } else if (date < 18) {
+            alert(`Guten Tag ${name}`);
+        } else if (date < 22) {
+            alert(`Guten Abend ${name}`);
+        } else {
+            alert(`Guten Nacht ${name}`);
+        }
+
+        </script>
+    </head>
+<body>
+    
+</body>
+</html>
