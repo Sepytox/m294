@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let Namen = ["Franz", "Jenny", "Karen", "Joseph", "Richard", "Florenze"]
+
+        let text = Namen.join();
+        
+        console.log(text)
+
+
+
+        Namen.sort();
+        console.log(Namen)
+
+
+        let upper = Namen.map(element => {
+            return element.toLocaleUpperCase();
+        });
+
+        console.log(upper)
+
+        let text2 = Namen.join();
+
+        const rot13 = (text2) => {
+            const originalAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            const cipher = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
+            return text2.replace(/[a-z]/gi, letter => cipher[originalAlpha.indexOf(letter)])
+        
+            console.log(text2)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
