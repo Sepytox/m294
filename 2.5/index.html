@@ -178,3 +178,108 @@
   </body>
 
 </html>
+
+
+
+// Äpfel mit mehr als einem e im Namen die CSS_Klasse hinzufügen
+const apples = document.querySelectorAll("#aepfel li");
+apples.forEach((apple) => {
+  if(apple.innerText.split('e').length - 1 >= 2) {
+    apple.classList.add('vitaminE')
+  }
+});
+
+//Namen mit 3 oder weniger Zeichen
+names.filter((name) => name.length < 4);
+,
+
+names.filter((name) => name.length <= 3
+
+
+//Jedes Zweiter Element ausgeben
+const oddApples = document.querySelectorAll("#aepfel li:nth-child(odd)");
+        oddApples.forEach((apple) => apple.remove());
+
+
+//Äpfel mit Anfangsbuchstabe G ausblenden/verstecken
+const apples = document.querySelectorAll("#aepfel li");
+apples.forEach((apple) => {
+  if(apple.innerText.startsWith("G")) {
+    apple.style.display = "none";
+  }
+});
+
+
+//Zeigt alertbic wenn der Fokus des Eingabefelden verlassen wird
+input.addEventListener("blur", () => alert("Bye!"));
+
+//Neues Objekt mit bestehendem Attribut
+Object.assign(cv.address, {});
+{...cv.address}
+
+
+//Gibt aus wann er aufgehört hat als Busfahrer zu arbeoten
+cv.experience[1].end
+,
+cv['experience'][1]['end']
+,
+cv['experience'][1].end
+
+
+//Facts
+
+Die Position von einem Element in einem Array bestimmen. → indexOf();,
+
+Prüfen ob ein Array ein gesuchtes Element enthält. → includes();,
+
+Für jedes Element eine Funktion aufrufen und deren Resultate in einem neuen Array sammeln. → map();,
+
+Das letzte Element aus dem Array entfernen und zurückgeben. → pop();,
+
+Ein neues Element dem Array hinzufügen. → push();,
+
+Ein Array umkehren. → reverse();
+
+
+//Bestehenden Array neuer Name hinzufügen
+names.push("Hans");
+,
+names[names.length] = "Hans";
+
+
+//Selektiert drittes Element von der Apfelliste
+document.querySelector("#aepfel li:nth-child(3)")
+,
+document.querySelectorAll('#aepfel li')[2]
+,
+document.getElementsByTagName('li')[2]
+
+
+javascript notizen:
+
+let für variable
+const für constante und so
+
+constant bei arrays: REferenz ist konstant aber array selber kann man ändern, dh es gibt kein andern aray mit dem namen 
+immutable: man macht neuen array und manipuliert diesen, nicht den originalen.
+map(): callback funktion für jedes element in array und wird in neue array gesammelt.
+
+      wie man mit js elemente in html ändert, löscht usw
+      ändern: const changeAlbum = document.getElementById("changeAlbum");
+      changeAlbum.innerText = "Test";         man muss zuerst auswählen und dann kann man ändern.
+      
+      
+      
+      löschen:   const delTrack = document.querySelector("#delTrack");
+            delTrack.remove()
+      
+      
+      
+      add Element to list:
+      
+      
+      
+      const smth = document.createElement("li");
+      const othersmth = document.createTextNode("Text");
+      smth.appendChild(othersmth)
+      docuemnt.getElementById("Listid").appendChild(smth)
