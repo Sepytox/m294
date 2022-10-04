@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const decrementButton = document.getElementById("decrementButton");
+    const displaySpan = document.getElementById("displaySpan");
+    const incrementButton = document.getElementById("incrementButton");
+
+    decrementButton.addEventListener("click", () => {
+        displaySpan.innerText--;
+    });
+
+    incrementButton.addEventListener("click", () => {
+        displaySpan.innerText = parseInt(displaySpan.innerText) + 1;
+    });
+});
+</script>
+<body>
+    <button id="decrementButton">-1</button>
+    <span id="displayspan">0</span>
+    <button id="incrementButton">+1</button>
+</body>
+</html>
