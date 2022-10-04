@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script>
+
+        const names = ['ANNE', 'Jenny', 'Karen', 'Joseph', 'Richard', 'Florenze'];
+
+
+
+        function toCaeser (input){
+
+            const characters = input.split("");
+
+            const newCharacters = characters.map((characters) => {
+
+                return String.fromCharCode((characters.charCodeAt(0) -65 + 13) % 26
+
+                    + 65);
+         });
+
+            return newCharacters.join("");  
+
+        }
+
+
+        for (let step = 0; step < 5; step++) {
+        console.log(toCaeser(names[step]))
+        }       
+    </script>
+
+</head>
+
+<body>
+
+   
+
+</body>
+
+</html>
