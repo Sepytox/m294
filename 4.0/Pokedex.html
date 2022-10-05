@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex abfragen</title>
+    <script>
+        let NameData;
+        let pokename = document.getElementById("NameInput");
+  
+        fetch('https://pokeapi.co/api/v2/pokemon/'+pokename+'/')
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            nameData = data;
+          });
+  
+  
+        document.addEventListener("DOMContentLoaded", () => {
+          const nameInput = document.getElementById("NameInput");
+          const pokeidInput = document.getElementById("PokeidInput");
+  
+          nameInput.addEventListener("blur", () => {
+            if (nameData) {
+              const nameEntry = nameData.find((entry) => entry.namecode == nameInput.value);
+              pokeid.value = nameEntry.pokeid;
+            }
+          })
+        });
+      </script>
+</head>
+<body>
+    <form>
+        <label for="NameInput">Name</label>
+        <input type="text" name="Name" id="NameInput" />
+        <label for="PokeidInput">ID</label>
+        <input type="text" name="pokeid" id="PokeidInput" />
+    </form>
+  </body>
+</html>
